@@ -1,13 +1,8 @@
-//UNIFORMG - ESTRUTURA DE DADOS II
-//CI NCIA DA COMPUTA«√O - 4 PERÕODO
-//TRABALHO REALIZADO POR:
-
-//NOME: EVANDRO GON«ALVES BARROSO MEDINA
 
 #include <iostream>
 #include <stdlib.h>
 #include <locale.h>
-#include <algorithm> // para valor m·ximo
+#include <algorithm> // para valor m√°ximo
 #include <vector> // para classe vetor
 
 using namespace std;
@@ -70,7 +65,7 @@ void Arvore::inserir(int num, No *&no){
 			if (num > no->valor){
 				inserir(num, no->dir);
 			}else{
-				cout << "Erro: Valor " << num << " j· existe na ·rvore!" << endl;
+				cout << "Erro: Valor " << num << " j√° existe na √°rvore!" << endl;
 			}
 		}
 	}
@@ -78,7 +73,7 @@ void Arvore::inserir(int num, No *&no){
 
 void Arvore::pesquisar(int num, No *&no){
 	if (no == NULL){
-		cout << "Valor " << num << " n„o est· presente na ·rvore!" << endl;
+		cout << "Valor " << num << " n√£o est√° presente na √°rvore!" << endl;
 	}else{
 		if (num < no->valor){
 			pesquisar(num, no->esq);
@@ -86,7 +81,7 @@ void Arvore::pesquisar(int num, No *&no){
 			if (num > no->valor){
 				pesquisar(num, no->dir);
 			}else{
-				cout << "Valor " << num << " encontrado na ·rvore!" << endl;
+				cout << "Valor " << num << " encontrado na √°rvore!" << endl;
 			}
 		}
 	}
@@ -235,7 +230,7 @@ int Arvore::nivelNo(int num, int nivel, No *&no){
         if (no == NULL)
         return 0;
 
-    if (no->valor == num) //Se o valor do nÛ for igual ao valor da raiz retorna nivel
+    if (no->valor == num) //Se o valor do n√≥ for igual ao valor da raiz retorna nivel
         return nivel;
 
     int proximoNivel = nivelNo(num, nivel + 1, no->esq); //caminha pra esquerda e soma 1 no valor do nivel
@@ -255,7 +250,7 @@ bool Arvore::guardaCaminho(No *&no, vector<int> &vet, int num){
         return true;
     if((guardaCaminho(no->esq, vet, num) || (guardaCaminho(no->dir, vet, num))))
         return true;
-    vet.pop_back(); //Caso o nÛ n„o esteja presente nem na esquerda e nem na direita ele ser· retirado do vetor
+    vet.pop_back(); //Caso o n√≥ n√£o esteja presente nem na esquerda e nem na direita ele ser√° retirado do vetor
     return false;
 }
 
@@ -264,7 +259,7 @@ void Arvore::caminhoNo(int num, No *&no){
 
     if(guardaCaminho(no, vet, num)){
             cout<<"Caminho ate o no: ";
-        for(int i=0; i < vet.size()-1; i++) //vet.size()-1 elimina o no que est· sendo verificado
+        for(int i=0; i < vet.size()-1; i++) //vet.size()-1 elimina o no que est√° sendo verificado
             cout<<vet[i]<< " ";
     }
     else
@@ -292,14 +287,14 @@ int main(){
 		cout <<"4 -  Pre-Ordem"<<endl;
 		cout <<"5 -  Central"<<endl;
 		cout <<"6 -  Pos-Ordem"<<endl;
-		cout <<"7 -  Maior nÛ"<<endl;
-		cout <<"8 -  Menor nÛ"<<endl;
-		cout <<"9 -  Soma de todos os nÛs"<<endl;
-		cout <<"10 - Quantidade de nÛs com 2 filhos"<<endl;
-		cout <<"11 - Quantidade de nÛs com 1 filho"<<endl;
-		cout <<"12 - Quantidade de nÛs folha"<<endl;
-		cout <<"13 - Nivel de um determinado nÛ"<<endl;
-		cout <<"14 - Caminho atÈ um determinado nÛ"<<endl;
+		cout <<"7 -  Maior n√≥"<<endl;
+		cout <<"8 -  Menor n√≥"<<endl;
+		cout <<"9 -  Soma de todos os n√≥s"<<endl;
+		cout <<"10 - Quantidade de n√≥s com 2 filhos"<<endl;
+		cout <<"11 - Quantidade de n√≥s com 1 filho"<<endl;
+		cout <<"12 - Quantidade de n√≥s folha"<<endl;
+		cout <<"13 - Nivel de um determinado n√≥"<<endl;
+		cout <<"14 - Caminho at√© um determinado n√≥"<<endl;
 		cout <<"15 - Altura da arvore"<<endl;
 		cout <<"0  - Sair"<<endl;
 		cout <<"Digite a opcao desejada: ";
@@ -332,9 +327,9 @@ int main(){
 			cin >> num;
 			No *aux = t.raiz;
 			if (t.remover(num, aux)){
-				cout << "Valor " << num << " removido da ·rvore!" << endl;
+				cout << "Valor " << num << " removido da √°rvore!" << endl;
 			}else{
-				cout << "Valor " << num << " n„o est· presente na ·rvore!" << endl;
+				cout << "Valor " << num << " n√£o est√° presente na √°rvore!" << endl;
 			}
 			system("pause");
 		}
