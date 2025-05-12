@@ -27,6 +27,4 @@ O programa contém métodos que retornam as seguintes informações sobre a árv
 
 Este projeto tem fins **didáticos**, ideal para estudantes que desejam entender na prática o funcionamento de árvores binárias, seus percursos e análises comuns.
 
----
 
-Sinta-se à vontade para explorar o código, testar diferentes estruturas e sugerir melhorias! 🌱
